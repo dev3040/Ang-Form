@@ -1,0 +1,182 @@
+textarea{resize: none}
+.card-1{
+    border-radius: 10px;
+    background-color: white;
+    background-color: white;
+    padding: 45px;
+    position: relative;
+    height: 659px;
+    right: 25%;
+    width: 49%;
+    float: right;
+    top:64px;
+}
+div.card-body{
+    
+    height: 100%;
+    /* line-height: 0px; */
+    overflow-y: auto;
+    text-overflow: ellipsis;
+    
+    /* new css */
+    max-width: 100%;
+}
+
+textarea.ng-touched.ng-invalid{
+    border-bottom: solid 2px red;
+}
+textarea.ng-touched.ng-valid{
+    border-bottom: 2px solid #27b8b0;
+}
+input.ng-touched.ng-invalid{
+    border-bottom: solid 2px red;
+}
+input.ng-touched.ng-valid{
+    border-bottom: 2px solid #27b8b0;
+}
+.error{
+    
+    position: relative;
+    top: -9px;
+    color: red;
+    font-size: 10px
+}.error2{
+    
+    position: relative;
+    top: -17px;
+    color: red;
+    font-size: 10px
+}
+.errorTA{
+    
+    position: relative;
+    top: -30px;
+    color: red;
+    font-size: 10px
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    margin-bottom: 5%;
+    
+}
+textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    margin-bottom: 5%;
+}
+input:focus
+{
+    border-bottom: 2px solid #27b8b0;
+    outline-offset: 0px;
+    outline: none;
+}
+textarea:focus
+{
+    border-bottom: 2px solid #27b8b0;
+    outline-offset: 0px;
+    outline: none;
+}
+.bg-div{
+    background-image: url("/assets/ddd.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+::placeholder {
+    font-size: 14px;
+   
+  }
+.submit {
+    width: auto;
+    background: #111;
+    color: #fff;
+    width: 150px;
+    padding: 16px 17px;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    cursor: pointer;
+  
+}
+.submit:hover
+{
+    background-color: #27b8b0;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-1{
+        border-radius: 10px;
+        background-color: white;
+        background-color: white;
+        padding: 45px;
+        position: relative;
+        height: 659px;
+        right: 4%;
+        width: 92%;
+        float: right;
+        top: 32px;
+    }
+    div.card-body{
+    
+        height: 100%;
+        /* line-height: 0px; */
+        overflow-y: auto;
+        text-overflow: ellipsis;
+        
+        /* new css */
+        max-width: 100%;
+    }
+  }
+  ::-webkit-scrollbar {
+    background-color:#fff;
+    width:5px
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color:#fff
+   
+  }
+   
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb { */
+    /* background: #495353; 
+    border-radius: 10px; */
+  /* } */
+  .submit:disabled {
+    background: #e47d7d;
+    color: white;
+  }
+ 
+  /* Handle on hover */
+  /* ::-webkit-scrollbar-thumb:hover {
+    background: #111; 
+  } */
+  /* input:focus, input:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+   }
+   
+   
+   input::-webkit-input-placeholder {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+    color: #1abc9c;
+    font-size: 11px;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    visibility: visible !important;
+   } */
