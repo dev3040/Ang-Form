@@ -37,7 +37,7 @@
           <div *ngIf="regForm.get('email').touched&&regForm.get('email').invalid" class="error2">
             <span *ngIf="regForm.get('email').errors.required">Email is
               required</span>
-            <span *ngIf="regForm.get('email').errors.email">Enter Valid
+            <span *ngIf="regForm.get('email').errors.pattern">Enter Valid
               email</span>
           </div>
         </div>

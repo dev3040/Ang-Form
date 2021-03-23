@@ -21,7 +21,7 @@ export class AppComponent {
       fname: ['', Validators.required],
       lname: ['', Validators.required],
       address: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       cnfpassword: ['', Validators.required],
       zip_code: ['', [Validators.required, Validators.pattern("[0-9 ]{6}")]],
@@ -69,12 +69,23 @@ export class AppComponent {
     }
 
   }
-  numberOnly(event): boolean {
+
+  numberOnly(event):boolean {
+    // const charCode = (<HTMLInputElement>event.target).value;
+    // var regex = /^[a-zA-Z_ ]*$/
+    // console.log(charCode);
+    // console.log(regex.test(charCode));
     const charCode = (event.which) ? event.which : event.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
       return false;
     }
     return true;
+    
+    // if (regex.test(charCode[charCode.length - 1]) == true) {
+    //   console.log("true");
+    //   return true;
+    // }
+    //   return false;
   }
 
 }
