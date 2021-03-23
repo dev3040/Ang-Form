@@ -1,60 +1,68 @@
-textarea{resize: none}
-.card-1{
-    border-radius: 10px;
-    background-color: white;
-    background-color: white;
-    padding: 45px;
-    position: relative;
-    height: 659px;
-    right: 25%;
-    width: 49%;
-    float: right;
-    top:64px;
-}
-div.card-body{
-    
-    height: 100%;
-    /* line-height: 0px; */
-    overflow-y: auto;
-    text-overflow: ellipsis;
-    
-    /* new css */
-    max-width: 100%;
+textarea {
+  resize: none
 }
 
-textarea.ng-touched.ng-invalid{
-    border-bottom: solid 2px red;
+.card-1 {
+  border-radius: 10px;
+  background-color: white;
+  background-color: white;
+  padding: 45px;
+  position: relative;
+  height: 659px;
+  right: 25%;
+  width: 49%;
+  float: right;
+  top: 64px;
 }
-textarea.ng-touched.ng-valid{
-    border-bottom: 2px solid #27b8b0;
+
+div.card-body {
+  margin-top: 20px;
+  height: 94%;
+  /* line-height: 0px; */
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  /* new css */
+  max-width: 100%;
 }
-input.ng-touched.ng-invalid{
-    border-bottom: solid 2px red;
+
+textarea.ng-touched.ng-invalid {
+  border-bottom: solid 2px red;
 }
-input.ng-touched.ng-valid{
-    border-bottom: 2px solid #27b8b0;
+
+textarea.ng-touched.ng-valid {
+  border-bottom: 2px solid #27b8b0;
 }
-.error{
-    
-    position: relative;
-    top: -9px;
-    color: red;
-    font-size: 10px
-}.error2{
-    
-    position: relative;
-    top: -17px;
-    color: red;
-    font-size: 10px
+
+input.ng-touched.ng-invalid {
+  border-bottom: solid 2px red;
 }
-.errorTA{
-    
-    position: relative;
-    top: -30px;
-    color: red;
-    font-size: 10px
+
+input.ng-touched.ng-valid {
+  border-bottom: 2px solid #27b8b0;
 }
-input{
+
+.error {
+  position: relative;
+  top: -9px;
+  color: red;
+  font-size: 10px
+}
+
+.error2 {
+  position: relative;
+  top: -17px;
+  color: red;
+  font-size: 10px
+}
+
+.errorTA {
+  position: relative;
+  top: -4px;
+  color: red;
+  font-size: 10px
+}
+
+/* input{
     width: 100%;
     border: none;
     border-bottom: 2px solid #ebebeb;
@@ -78,90 +86,78 @@ textarea:focus
     border-bottom: 2px solid #27b8b0;
     outline-offset: 0px;
     outline: none;
-}
-.bg-div{
-    background-image: url("/assets/ddd.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-::placeholder {
-    font-size: 14px;
-   
-  }
-.submit {
-    width: auto;
-    background: #111;
-    color: #fff;
-    width: 150px;
-    padding: 16px 17px;
-    font-size: 13px;
-    border: none;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    cursor: pointer;
-  
-}
-.submit:hover
-{
-    background-color: #27b8b0;
+} */
+
+.bg-div {
+  background-image: url("/assets/ddd.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-    .card-1{
-        border-radius: 10px;
-        background-color: white;
-        background-color: white;
-        padding: 45px;
-        position: relative;
-        height: 659px;
-        right: 4%;
-        width: 92%;
-        float: right;
-        top: 32px;
-    }
-    div.card-body{
-    
-        height: 100%;
-        /* line-height: 0px; */
-        overflow-y: auto;
-        text-overflow: ellipsis;
-        
-        /* new css */
-        max-width: 100%;
-    }
-  }
-  ::-webkit-scrollbar {
-    background-color:#fff;
-    width:5px
-  }
+::placeholder {
+  font-size: 14px;
+}
+
+.submit {
+  width: auto;
+  background: #111;
+  color: #fff;
+  width: 150px;
+  padding: 16px 17px;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #27b8b0;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 5px
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background-color: #fff
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #495353;
+  border-radius: 10px;
+  display: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  display: block;
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color:#fff
-   
-  }
-   
-  /* Handle */
-  /* ::-webkit-scrollbar-thumb { */
-    /* background: #495353; 
-    border-radius: 10px; */
-  /* } */
-  .submit:disabled {
-    background: #e47d7d;
-    color: white;
-  }
- 
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
+}
+
+
+
+.submit:disabled {
+  background: #e47d7d;
+  color: white;
+}
+
+/* Handle on hover */
+
+/* ::-webkit-scrollbar-thumb:hover {
     background: #111; 
   } */
-  /* input:focus, input:valid {
+
+/* input:focus, input:valid {
     box-shadow: none;
     outline: none;
     background-position: 0 0;
@@ -180,3 +176,158 @@ textarea:focus
     transform: translateY(-8px);
     visibility: visible !important;
    } */
+
+.floating-label {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.floating-input, .floating-select {
+  font-size: 14px;
+  padding: 4px 4px;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.floating-input:focus, .floating-select:focus {
+  outline: none;
+  border-bottom: 2px solid #27b8b0;
+}
+
+label {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 5px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.floating-input:focus~label, .floating-input:not(:placeholder-shown)~label {
+  top: -18px;
+  font-size: 12px;
+}
+
+.floating-select:focus~label, .floating-select:not([value=""]):valid~label {
+  top: -18px;
+  font-size: 12px;
+}
+
+/* active state */
+
+.floating-input:focus~.bar:before, .floating-input:focus~.bar:after, .floating-select:focus~.bar:before, .floating-select:focus~.bar:after {
+  width: 50%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.floating-textarea {
+  min-height: 30px;
+  max-height: 260px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* highlighter */
+
+/* .highlight {
+    position:absolute;
+    height:50%; 
+    width:100%; 
+    top:15%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  } */
+
+/* active state */
+
+.floating-input:focus~.highlight, .floating-select:focus~.highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* animation */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+span {
+  position: relative;
+  top: 20px;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-1 {
+    border-radius: 10px;
+    background-color: white;
+    background-color: white;
+    padding: 14px;
+    position: relative;
+    height: 596px;
+    right: 9%;
+    width: 83%;
+    float: right;
+    top: 64px;
+  }
+  div.card-body {
+    height: 90%;
+    /* line-height: 0px; */
+    overflow-y: auto;
+    text-overflow: ellipsis;
+    /* new css */
+    max-width: 100%;
+    margin-top: 35px;
+  }
+  /* Handle */
+::-webkit-scrollbar-thumb{
+  background: #495353;
+  border-radius: 10px;
+  display: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  display: none;
+  
+}
+}

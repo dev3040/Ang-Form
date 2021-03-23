@@ -1,32 +1,39 @@
 <div class="container ">
   <form [formGroup]="regForm" (ngSubmit)="getData()">
+    
     <div class="card-1 mt-3">
       <div class="card-body">
         <div class="row">
           <div class="col-6">
-            <div style="margin-bottom: 20px;">
-              <input type="text" formControlName="fname" id="first_name" placeholder="First Name">
-              <span *ngIf="regForm.get('fname').touched&&regForm.get('fname').invalid" class="error">First name is
-                required</span>
+            <div class="floating-label" >
+              <input class="floating-input" type="text" formControlName="fname" id="first_name" placeholder=" ">
+              <span class="highlight"></span>
+              <label>First name</label>
+              <span  class="error"  *ngIf="regForm.get('fname').touched&&regForm.get('fname').invalid">First name is required</span>
             </div>
           </div>
           <div class="col-6">
-            <div style="margin-bottom: 20px;">
-              <input type="text" formControlName="lname" id="last_name" placeholder="Last Name">
+            <div class="floating-label" >
+              <input class="floating-input" type="text" formControlName="lname" id="last_name" placeholder=" ">
+              <span class="highlight"></span>
+              <label>Last name</label>
               <span *ngIf="regForm.get('lname').touched&&regForm.get('lname').invalid" class="error">Last name is
                 required</span>
             </div>
           </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <textarea formControlName="address" placeholder="Leave a comment here" id="address"
-            style="height: 51px"></textarea>
+        <div class="floating-label" >
+          <textarea class="floating-input"  formControlName="address" placeholder=" " id="address" style="height: 51px"></textarea>
+          <span class="highlight"></span>
+          <label>Address</label>
           <span *ngIf="regForm.get('address').touched&&regForm.get('address').invalid" class="errorTA">Address is
             required</span>
 
         </div>
-        <div style="margin-bottom: 20px;">
-          <input type="email" formControlName="email" id="floatingInput" placeholder="Email">
+        <div class="floating-label" >
+          <input class="floating-input" type="email" formControlName="email" id="floatingInput" placeholder=" ">
+          <span class="highlight"></span>
+          <label>Email</label>
           <div *ngIf="regForm.get('email').touched&&regForm.get('email').invalid" class="error2">
             <span *ngIf="regForm.get('email').errors.required">Email is
               required</span>
@@ -34,37 +41,51 @@
               email</span>
           </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <input type="password" formControlName="password" id="pass" placeholder="Password">
-          <span *ngIf="regForm.get('password').touched&&regForm.get('password').invalid" class="error">Password is
-            required</span>
+        <div class="floating-label" >
+          <input class="floating-input" type="password" formControlName="password" id="pass" placeholder=" ">
+          <span class="highlight"></span>
+          <label>Password</label>
+          <div *ngIf="regForm.get('password').touched&&regForm.get('password').invalid" class="error2">
+            <span *ngIf="regForm.get('password').errors.required">Password is
+              required</span>
+            <span *ngIf="regForm.get('password').errors.minlength">Password must be 6 character long</span>
+          </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <input type="password" formControlName="cnfpassword" id="conform_pass" placeholder="Confirm Password">
+        <div class="floating-label" >
+          <input class="floating-input" type="password" formControlName="cnfpassword" id="conform_pass"
+            placeholder=" ">
+            <span class="highlight"></span>
+          <label>Confrim password</label>
           <div *ngIf="regForm.get('cnfpassword').touched&&regForm.get('cnfpassword').invalid" class="error2">
             <span *ngIf="regForm.get('cnfpassword').errors.required">Password is
               required</span>
             <span *ngIf="regForm.get('cnfpassword').errors.confirmedValidator">Password doesn't match</span>
           </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <input type="text" formControlName="zip_code" id="zip_code" placeholder="Zip Code">
+        <div class="floating-label" >
+          <input class="floating-input" type="text" formControlName="zip_code" id="zip_code" placeholder=" ">
+          <span class="highlight"></span>
+          <label>Zip code</label>
           <div *ngIf="regForm.get('zip_code').touched&&regForm.get('zip_code').invalid" class="error2">
             <span *ngIf="regForm.get('zip_code').errors.required">Zip code is
               required</span>
             <span *ngIf="regForm.get('zip_code').errors.pattern">Invalid Zipcode</span>
           </div>
         </div>
-        <div style="margin-bottom: 20px;">
-          <input type="text" formControlName="phone_num" id="phonenum" placeholder="phone number">
+        <div class="floating-label" >
+          <input class="floating-input" type="text" formControlName="phone_num" id="phonenum"
+            placeholder=" ">
+            <span class="highlight"></span>
+          <label>Phone number</label>
           <div *ngIf="regForm.get('phone_num').touched&&regForm.get('phone_num').invalid" class="error2">
             <span *ngIf="regForm.get('phone_num').errors.required">Phone number is
               required</span>
             <span *ngIf="regForm.get('phone_num').errors.pattern">Invalid phone number</span>
           </div>
         </div>
-        <button type="submit" [disabled]="regForm.invalid" class="submit" value="Request an appointment">Register</button>
-
+     
+        <button type="submit" class="submit"  [disabled]="regForm.invalid"
+          value="Request an appointment">Register</button>
       </div>
     </div>
   </form>
