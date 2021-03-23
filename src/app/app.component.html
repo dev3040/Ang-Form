@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="floating-label" >
-          <input class="floating-input" type="text" formControlName="phone_num" id="phonenum"
+          <input (keypress)="numberOnly($event)" class="floating-input" type="text" formControlName="phone_num" id="phonenum"
             placeholder=" ">
             <span class="highlight"></span>
           <label>Phone number</label>
@@ -84,7 +84,7 @@
           </div>
         </div>
      
-        <button type="submit" class="submit"  [disabled]="regForm.invalid"
+        <button type="submit" class="submit" 
           value="Request an appointment">Register</button>
       </div>
     </div>

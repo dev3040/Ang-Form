@@ -47,17 +47,34 @@ export class AppComponent {
 
   }
 
-
+  validateAllFormFields(formGroup: FormGroup) {         //{1}
+    Object.keys(formGroup.controls).forEach(field => {  //{2}
+      const control = formGroup.get(field);             //{3}
+      if (control instanceof FormControl) {             //{4}
+        control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {        //{5}
+        this.validateAllFormFields(control);            //{6}
+      }
+    });
+  }
   get formData() { return this.regForm.controls }
   getData() {
-    if (this.regForm.invalid) {       
+    if (this.regForm.invalid) {
+      this.validateAllFormFields(this.regForm);
     }
-    else
-    {
+    else {
       alert("Registered")
-      console.log(this.regForm.value)
+      console.log(JSON.stringify(this.regForm.value))
       this.regForm.reset()
     }
-    
+
   }
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+  }
+
 }
